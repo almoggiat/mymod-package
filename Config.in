@@ -1,0 +1,5 @@
+config BR2_PACKAGE_MYMOD
+    bool "mymod"
+    depends on BR2_LINUX_KERNEL
+    help
+      Extremly useful kernel module.

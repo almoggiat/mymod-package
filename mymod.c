@@ -1,0 +1,19 @@
+#include <linux/module.h>
+#include <linux/errno.h>
+#include <linux/kernel.h>
+
+static int __init mymod_init(void){
+  printk(KERN_INFO "module loaded\n");
+  return 0;
+}
+
+
+static void __exit mymod_exit(void){
+  printk(KERN_INFO "module unloaded\n");
+}
+
+module_init(mymod_init);
+module_exit(mymod_exit);
+
+MODULE_LICENSE("GPL");
+MODULE_AUTHOR("Student");
